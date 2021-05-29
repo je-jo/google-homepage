@@ -1,10 +1,15 @@
-* {
+@import url(minireset.css);
+
+/* * {
     outline: 1px solid red;
-}
+} */
 
 html, body {
     width: 100%;
     height: 100%;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #000;
 }
 
 .wrapper {
@@ -17,12 +22,12 @@ align-items: center;
 }
 
 main {
-    justify-content: center;
+    width: 100%;
+    margin-top: -100px;
 }
 
 header {
     width: 100%;
-    display: flex;
 }
 
 ul {
@@ -31,6 +36,8 @@ ul {
     margin: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 li {
@@ -43,11 +50,55 @@ a {
     padding: 5px;
 }
 
+a, a:visited {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: #70757a;
+}
+
+.topnav a {
+    color: #000;
+    padding-left: 15px;
+}
+
 .navbar {
+    width: 99%;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 27px;
+}
+
+form {
+    width: 60%;
+    margin: 30px auto;
+}
+
+input {
     width: 100%;
+    max-width: 560px;
+    padding: 12px;
+    border: 1px solid lightgray;
+    border-radius: 24px;
+    font-size: 1rem;
+}
+
+.button {
+    padding: 12px;
+    margin: 4px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.button-special {
+    margin: 0;
+    padding: 7px 23px !important;
+    background-color: #1a73e8;
+    color: #fff !important;
 }
 
 footer {
     width: 100%;
     background-color: #f2f2f2;
+    font-size: 14px;
+    
 }
