@@ -4,13 +4,13 @@
 03 NAVIGATION
 04 LINKS
 05 PAGE CENTER
-06 MEDIA QUERY */
+06 MEDIA QUERIES */
 
 @import url(minireset.css);
 
-* {
+/* * {
     outline: 1px solid red;
-}
+} */
 
 
 
@@ -25,37 +25,37 @@ html, body {
     font-size: 14px;
     font-family: Arial, sans-serif;
     color: #222;
+    /* overflow: scroll; */
 }
 
 .wrapper {
-text-align: center;
-height: 100%;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: center;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
 /* ==========NAVIGATION======== */
 
 .topnav {
-    padding: 10px;
-    
-}
-ul {
-    list-style-type: none;
-    /* margin: 0; */
-    display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
-    flex-wrap: wrap;
-    line-height: 27px;
+    padding: 10px;  
 }
 
-/* li {
-    display: inline;
-} */
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* line-height: 1.5rem; */
+    
+}
+
+li {
+    align-self: center;
+}
 
 .bottomnav {
     background-color: #f2f2f2;
@@ -68,6 +68,7 @@ a {
     display: inline-block;
     text-decoration: none;
     padding: 5px 15px;
+    font-size: 1rem;
 }
 
 a, a:visited {
@@ -75,7 +76,7 @@ a, a:visited {
 }
 
 .topnav a {
-    font-size: 13px;
+    font-size: 0.85rem;
 }
 
 a.button {
@@ -88,7 +89,7 @@ a.button {
 a.button-special {
     font-size: 1rem;
     margin: 0;
-    padding: 7px 23px;
+    padding: 9px 23px;
     background-color: #1a73e8;
     color: #fff;
 }
@@ -99,10 +100,10 @@ a.button-special {
     
 }
 
-.grey {
+span.material-icons {
     color: #5f6368;
-    align-self: center;
-    justify-self: center;
+    font-size: calc(1rem + 10px);
+    height: auto;
 }
 
 
@@ -111,7 +112,7 @@ a.button-special {
 
 
 main {
-    margin-top: -300px;
+    margin-top: -10%;
 }
 
 img {
@@ -150,6 +151,10 @@ input:focus-visible {
 
 
 @media screen and (max-width: 601px) {
+    html, body {
+        font-size: calc(12px + 0.5vw);
+    }
+
     ul {
         justify-content: center;
     }
