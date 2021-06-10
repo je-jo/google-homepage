@@ -8,12 +8,6 @@
 
 @import url(minireset.css);
 
-/* * {
-    outline: 1px solid red;
-} */
-
-
-
 /* =======MAIN PAGE ELEMENTS====== */
 
 .full-width {
@@ -22,13 +16,12 @@
 
 html, body {
     height: 100%;
-    font-size: 14px;
+    font-size: calc(12px + 0.5vw);
     font-family: Arial, sans-serif;
     color: #222;
-    /* overflow: scroll; */
 }
 
-.wrapper {
+.page-wrap {
     text-align: center;
     height: 100%;
     display: flex;
@@ -41,16 +34,13 @@ html, body {
 /* ==========NAVIGATION======== */
 
 .topnav {
-    padding: 10px;  
+    padding: 5px;  
 }
 
 ul {
-    list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    /* line-height: 1.5rem; */
-    
 }
 
 li {
@@ -96,15 +86,41 @@ a.button-special {
 
 .bottomnav a {
     padding: 15px;
-    color: #70757a;
-    
+    color: #70757a;  
 }
 
+/* =============ICONS============= */
+
 span.material-icons {
-    color: #5f6368;
     font-size: calc(1rem + 10px);
+}
+
+span.i-apps {
+    padding: 0;
+    color: #5f6368;
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span.i-apps:hover {
+    background-color: #eff0f0;
+}
+
+span.i-search {
+    color: #9aa0a6;
+}
+
+svg {
+    width: 24px;
     height: auto;
 }
+
+
 
 
 
@@ -113,6 +129,11 @@ span.material-icons {
 
 main {
     margin-top: -10%;
+}
+
+.img-wrap {
+    max-width: 55%;
+    margin: auto;
 }
 
 img {
@@ -126,36 +147,34 @@ form {
     margin: 30px auto;
 }
 
-input {
+.input-wrap {
     width: 90%;
     max-width: 560px;
-    padding: 12px;
+    margin: auto;
     border: 1px solid lightgray;
     border-radius: 24px;
-    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
-    background-image: url(images/baseline_search_black_24dp.png);
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  padding-left: 40px;
+input {
+    width: 80%;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none;
 }
 
 input:focus-visible {
     outline: none;
 }
 
-
-
-
-
-
-
-@media screen and (max-width: 601px) {
+@media screen and (min-width: 600px) {
     html, body {
-        font-size: calc(12px + 0.5vw);
+        font-size: 14px;
     }
 
     ul {
-        justify-content: center;
+        justify-content: space-between;
     }
 }
